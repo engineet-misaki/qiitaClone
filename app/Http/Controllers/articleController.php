@@ -21,14 +21,12 @@ class articleController extends Controller
         $articleArray=[];
         for($i=0; $i<count($title); $i++){
             $str = $title[$i]->qiita_title;
-            // $str = "LaravelでRoute::resourceを使うときに気をつけること";
             $str = urlencode($str);
     
             $url = "https://qiita.com/api/v2/items?query=title:" . $str;
             $method = "GET";
             $token = "4056902cebeb12329ab1cf8d03dc9e46da7a5dea";
             $options = [
-                // 'json' => $data,
                 'headers' => [
                     'Authorization' => 'Bearer ' . $token,
                     'Content-Type' => 'application/json',
@@ -81,7 +79,6 @@ class articleController extends Controller
         //
         $title = titles::all();
         $str = $title[$id]->qiita_title;
-        // $str = "LaravelでRoute::resourceを使うときに気をつけること";
         $str = urlencode($str);
 
 

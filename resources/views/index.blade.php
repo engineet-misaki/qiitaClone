@@ -2,13 +2,13 @@
 
 @section('content')
 <div id="app" class="container">
-    <div class="title"><h1>Qiita</h1></div>
+    <div class="title"><h4 class="bg-light p-2">記事一覧</h4></div>
     @foreach($articleArray as $index=> $articles)
     @foreach($articles as $article)
     @if($article['likes_count'] < 500)
         @continue
     @endif
-    <div class="content">
+    <div class="content bg-light p-2">
         <h2><a href="{{ url('articles', [$index]) }}" target="">{{$article['title']}}</a></h2>
         <div class="outline">
             <p>

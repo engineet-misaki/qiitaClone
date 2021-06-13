@@ -1,14 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div id="app" class="container">
+<div id="app" class="container bg-light">
         <div class="col-md-10 col-md-offset-2">
-            <h2>{{$article['title']}}</h2>
-            <!-- <pre> -->
+            <h2 class="p-5">{{$article['title']}}</h2>
             <?php
             echo $article['rendered_body'];
             ?>
-            <!-- </pre> -->
         </div>
 </div>
 

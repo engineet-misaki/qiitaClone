@@ -10903,3 +10903,7 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background-image: url(/images/bg.jpg?4726b6d7f70ea0ab3f5a2c1c918df5e9);
+}
+

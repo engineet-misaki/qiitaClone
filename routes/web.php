@@ -13,11 +13,12 @@
 
 // use Illuminate\Routing\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', 'articleController@index');
+Route::get('/home', 'articleController@index');
 
 Route::resource('articles', 'articleController');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
